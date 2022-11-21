@@ -1,51 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="cards-container">
+        <img src="./images/bg-card-front.png" alt="" />
+        <img src="./images/bg-card-back.png" alt="" />
+      </div>
+      <div class="form-container">
+        <form class="form" action="">
+          <div class="cardholder">
+            <label for="cardholderName">Cardholder Name</label>
+            <input type="text" id="cardholderName" />
+          </div>
+          <div class="card-number">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" />
+          </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+          <div class="exp-date">
+            <label>Exp. Date (MM/YY)</label>
+            <select name="month">
+              <option value="month" selected="disabled">MM</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+            <select name="year">
+              <option value="year" selected="disabled">YY</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>
+              <option value="2032">2032</option>
+              <option value="2033">2033</option>
+            </select>
+          </div>
 
-  000
+          <div class="cvc">
+            <label for="cvc">CVC</label>
+            <input type="text" maxlength="4" id="cvc" />
+          </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+          <input type="submit" value="Confirm" class="confirm-btn" />
+        </form>
+      </div>
+    </main>
+    <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 e.g. Jane Appleseed Card Number
+    e.g. 1234 5678 9123 0000 e.g. 123 Confirm -->
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+    <!-- Completed state start -->
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+    <!-- Thank you! We've added your card details Continue -->
 
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>
