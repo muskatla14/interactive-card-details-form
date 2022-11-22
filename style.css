@@ -1,8 +1,5 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
 
 :root {
     /* Primary */
@@ -16,6 +13,93 @@
     --very-dark-violet: hsl(278, 68%, 11%);
 }
 
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+}
+
+
+
+
+.main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+}
+
+
+.main .cards-container {
+    /* padding: 20px; */
+    position: relative;
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+}
+
+.card-front, .card-back {
+    position: absolute; 
+    color: var(--white);
+}
+
+.card-front {
+    top: 100px;
+    left: 170px;
+}
+
+.card-back {
+    bottom: 100px;
+    left: 260px;
+}
+
+.logo,
+.card-number,
+.card-front-name, 
+.card-front-exp,
+.card-back-cvc {
+    position: absolute;
+}
+
+.card-front .logo {
+    left: 30px;
+    top: 30px;
+}
+
+.card-front .card-number {
+    top: 60%;
+    left: 30px;
+    letter-spacing: 2px;
+    font-size: 30px;
+    align-items: center;
+}
+
+.card-front .card-front-name {
+    left: 30px;
+    bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-front .card-front-exp {
+    bottom: 30px;
+    right: 30px;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+.card-back .card-back-cvc {
+    bottom: 120px;
+    right: 60px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
 
 /* Footer */
 .attribution { font-size: 11px; text-align: center; }
