@@ -18,79 +18,89 @@
     <main class="main">
       <div class="cards-container">
         <div class="card-front">
-          <img class= "bg-front-card" src="./images/bg-card-front.png" alt="" />
-          <img class="logo "src="./images/card-logo.svg" alt="" />
+          <img class="bg-front-card" src="./images/bg-card-front.png" alt="" />
+          <img class="logo" src="./images/card-logo.svg" alt="" />
           <p class="card-number">0000 0000 0000 0000</p>
           <p class="card-front-name">Jane Appleseed</p>
           <p class="card-front-exp">00/00</p>
-          </div>
         </div>
         <div class="card-back">
-          <img src="./images/bg-card-back.png" alt="" />
+          <img class="bg-back-card" src="./images/bg-card-back.png" alt="" />
           <p class="card-back-cvc">000</p>
         </div>
       </div>
+
       <div class="form-container">
         <form class="form" action="">
-          <div class="cardholder">
+          <div class="form-cardholder">
             <label for="cardholderName">Cardholder Name</label>
-            <input type="text" id="cardholderName" />
+            <input
+              type="text"
+              id="cardholderName"
+              placeholder="e.g. Jane Appleseed"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='e.g. Jane Appleseed'"
+            />
+            <small class="alert">Cant be blank</small>
           </div>
-          <div class="card-number">
+          <div class="form-card-number">
             <label for="cardNumber">Card Number</label>
-            <input type="text" id="cardNumber" />
+            <input
+              type="text"
+              id="cardNumber"
+              placeholder="e.g. 1234 5678 9123 0000 e.g."
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='e.g. 1234 5678 9123 0000 e.g.'"
+            />
+            <small class="alert">Wrong format, numbers only</small>
           </div>
 
-          <div class="exp-date">
-            <label>Exp. Date (MM/YY)</label>
-            <select name="month">
-              <option value="month" selected="disabled">MM</option>
-              <option value="01">01</option>
-              <option value="02">02</option>
-              <option value="03">03</option>
-              <option value="04">04</option>
-              <option value="05">05</option>
-              <option value="06">06</option>
-              <option value="07">07</option>
-              <option value="08">08</option>
-              <option value="09">09</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-            </select>
+          <div class="data-card">
+            <div class="exp-date">
+              <label>Exp. Date (MM/YY)</label>
+              <input
+                type="number"
+                placeholder="MM"
+                minlength="2"
+                maxlength="2"
+              />
 
-            <select name="year">
-              <option value="year" selected="disabled">YY</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
-              <option value="2025">2025</option>
-              <option value="2026">2026</option>
-              <option value="2027">2027</option>
-              <option value="2028">2028</option>
-              <option value="2029">2029</option>
-              <option value="2030">2030</option>
-              <option value="2031">2031</option>
-              <option value="2032">2032</option>
-              <option value="2033">2033</option>
-            </select>
+              <input
+                type="number"
+                placeholder="YY"
+                minlength="2"
+                maxlength="2"
+              />
+              <small class="alert">Cant be blank</small>
+              <small class="alert">Cant be blank</small>
+            </div>
+
+            <div class="cvc">
+              <label for="cvc">CVC</label>
+              <input
+                type="text"
+                maxlength="4"
+                id="cvc"
+                placeholder="e.g. 123"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='e.g. 123'"
+              />
+              <small class="alert">Cant be blank</small>
+            </div>
           </div>
 
-          <div class="cvc">
-            <label for="cvc">CVC</label>
-            <input type="text" maxlength="4" id="cvc" />
-          </div>
-
-          <input type="submit" value="Confirm" class="confirm-btn" />
+          <input type="submit" class="confirm-btn" value="Confirm" />
         </form>
       </div>
+
+      <!-- Completed state start -->
+      <div class="complete-state">
+        <img src="./images/icon-complete.svg" alt="" />
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <input type="submit" class="btn" value="Continue" />
+      </div>
     </main>
-    <!--     e.g. Jane Appleseed Card Number
-    e.g. 1234 5678 9123 0000 e.g. 123 Confirm -->
-
-    <!-- Completed state start -->
-
-    <!-- Thank you! We've added your card details Continue -->
 
     <div class="attribution">
       Challenge by
