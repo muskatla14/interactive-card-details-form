@@ -23,6 +23,10 @@ body {
     font-size: 15px;
 }
 
+.hide {
+    display: none;
+}
+
 input {
     width: 100%;
     padding: 12px 20px;
@@ -31,6 +35,21 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+.error {
+    display: block;
+    color: var(--red);
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 
 input[type = "submit"] {
     letter-spacing: 1px;
@@ -174,19 +193,24 @@ input[type = "submit"] {
 .form-container .form .data-card {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
 }
 
-.form-container .form .data-card .exp-date  {
-    flex: 0 0 50%;
+.form-container .form .data-card .exp-date {
+    flex: 1;
 }
 
-.form-container .form .data-card .exp-date input {
-    width: 45%;
+.form-container .form .data-card .cvc {
+    flex: 1;
+}
+.mm-yy {
+    display: flex;
+    gap: 5px;
+}
+.mm, .yy {
+    flex: 1;
 }
 
-.form-container {
-    display: none;
-}
 
 @media only screen and (max-width: 1400px) {
     .card-front, .card-back {
@@ -253,7 +277,6 @@ input[type = "submit"] {
             right: 35px;
             font-size: 0.8rem;
     }
-
 
     .form-container, .complete-state {
         margin-top: 6rem;
