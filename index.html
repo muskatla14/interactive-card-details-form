@@ -64,11 +64,25 @@
               <label>Exp. Date (MM/YY)</label>
               <div class="mm-yy">
                 <div class="mm">
-                  <input id="mm" placeholder="MM" minlength="2" maxlength="2" />
+                  <input
+                    type="number"
+                    id="mm"
+                    placeholder="MM"
+                    minlength="2"
+                    maxlength="2"
+                    oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  />
                   <small class="error"></small>
                 </div>
                 <div class="yy">
-                  <input id="yy" placeholder="YY" minlength="2" maxlength="2" />
+                  <input
+                    type="number"
+                    id="yy"
+                    placeholder="YY"
+                    minlength="2"
+                    maxlength="2"
+                    oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  />
                   <small class="error"></small>
                 </div>
               </div>
@@ -77,12 +91,13 @@
             <div class="cvc">
               <label for="cvc">CVC</label>
               <input
-                type="text"
+                type="number"
                 maxlength="3"
                 id="cvc"
                 placeholder="e.g. 123"
                 onfocus="this.placeholder=''"
                 onblur="this.placeholder='e.g. 123'"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
               />
               <small class="error"></small>
             </div>
@@ -106,6 +121,7 @@
       </div>
     </main>
 
+    <!-- Footer -->
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

@@ -54,29 +54,35 @@ form.addEventListener('submit', (e) => {
 
 function validateInputs() {
     if(formName.value === '') {
-        errorMessage(formName, 'Name is required')
+        errorMessage(formName, 'Name is required');
+        formName.style.border = '2px solid var(--red)';
+        ;
     } 
 
     if(formCardNumber.value === '') {
-        errorMessage(formCardNumber, 'Cant be blank')
+        errorMessage(formCardNumber, 'Cant be blank');
+        formCardNumber.style.border = '2px solid var(--red)';
     } else if (isNaN(formCardNumber.value)) {
         errorMessage(formCardNumber, 'Wrong format, numbers only')
     }
     
     if(formMM.value === '') {
         errorMessage(formMM,'Cant be blank')
+        formMM.style.border = '2px solid var(--red)';
     } else if (isNaN(formMM.value)) {
         errorMessage(formMM, 'Wrong format, numbers only')
     }
 
     if(formYY.value === '') {
         errorMessage(formYY, 'Cant be blank')
+        formYY.style.border = '2px solid var(--red)';
     } else if (isNaN(formYY.value)) {
         errorMessage(formYY, 'Wrong format, numbers only')
     }
 
     if(formCvc.value === '') {
         errorMessage(formCvc, 'Cant be blank')
+        formCvc.style.border = '2px solid var(--red)';
     } else if (isNaN(formCvc.value)) {
         errorMessage(formCvc, 'Wrong format, numbers only')
     }

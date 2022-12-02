@@ -50,7 +50,6 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-
 input[type = "submit"] {
     letter-spacing: 1px;
     cursor: pointer;
@@ -208,8 +207,17 @@ input[type = "submit"] {
     gap: 5px;
 }
 .mm, .yy {
-    flex: 1;
+    flex: 1 1 auto;
 }
+
+/* Footer */
+.attribution {
+    font-size: 11px; 
+    text-align: center;
+    margin: 20px 0; 
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
 
 
 @media only screen and (max-width: 1400px) {
@@ -286,14 +294,7 @@ input[type = "submit"] {
     @media screen and (max-width:767px) {
         .form-container {
             width: 90%;
+            font-size: 14px;
         }
     }
 
-/* Footer */
-.attribution {
-     font-size: 11px; 
-     text-align: center;
-     margin: 20px 0; 
-}
-
-.attribution a { color: hsl(228, 45%, 44%); }
